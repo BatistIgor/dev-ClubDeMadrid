@@ -1,7 +1,7 @@
-.sdf {
-    padding: 20;
-}
-
-.sdfg {
-    padding: 0%;
+.first-screen {
+    width: 100%;
+    height: calc(100vh - $height-header);
+    background-image: url(../img/bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
