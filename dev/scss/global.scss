@@ -1,0 +1,57 @@
+body {
+    color: #fff;
+    font-family: $font-Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    background-color: $color-bg;
+}
+
+nav, ul, li {
+    margin: 0;
+    padding: 0; 
+    list-style: none; 
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+    font-family: $font-Inter;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 96px;
+}
+
+h3 {
+    font-size: 86px;
+}
+
+h4 {
+    font-size: 64px;
+}
+
+h5 {
+    font-size: 48px;
+}
+
+h6 {
+    font-size: 36px;
+}
+
+.container {
+    max-width: 1686px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
