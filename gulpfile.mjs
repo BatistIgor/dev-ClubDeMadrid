@@ -20,6 +20,13 @@ const sassCompiler = gulpSass(sass);  // gulpSass не будет работат
 const uglifyJs = uglify.default;      // uglify экспортируется по default, соответственно нужно импортировать по default
 const browser = browserSync.create(); // необходимо для инициализации экземпляра BrowserSync
 
+//перемещение видеофайлов
+function moveVideo() {
+    return src('dev/assets/video/**/*',{
+        encoding: false // Important!
+      }) 
+      .pipe(dest('build/assets/video')); 
+  }
 
 // Функции конвертации ttf в woff,woff2
 function fonts2woff() {
@@ -135,7 +142,7 @@ function watching() {
 }
 
 // Экспорт задач
-export {fonts2woff, fonts2woff2, sprite, minifyImages, convertToWebp, convertToAvif, styles, scripts, buildHtml, cleanDist, watching};
+export {fonts2woff, fonts2woff2, sprite, minifyImages, convertToWebp, convertToAvif, styles, scripts, buildHtml, cleanDist, watching, moveVideo};
 
 // Экспорт по умолчанию
-export default series(cleanDist, parallel(fonts2woff, fonts2woff2, minifyImages, convertToWebp, convertToAvif, styles, scripts, buildHtml), watching);
+export default series(cleanDist, parallel(moveVideo, fonts2woff, fonts2woff2, minifyImages, convertToWebp, convertToAvif, styles, scripts, buildHtml), watching);

@@ -80,6 +80,7 @@
         }
 
         &__navigation {
+            z-index: 100;
             flex-direction: column;
             position: absolute;
             top: $height-header;
