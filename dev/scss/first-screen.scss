@@ -3,6 +3,7 @@
     z-index: 10;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 300px;
 
     &__box {
         width: 50%;
@@ -231,6 +232,8 @@
 
 @media screen and (max-width: 500px) {
     .first-screen {
+        margin-bottom: 100px;
+        
         &__box {
             &--title {
                 height: calc((100vh - $height-header-mobile)*0.5);
