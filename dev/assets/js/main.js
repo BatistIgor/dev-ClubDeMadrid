@@ -21,3 +21,18 @@ function toggleText() {
         btn.innerText = "Leer más ↓";
     }
 }
+
+const videos = document.querySelectorAll('#myVideo');
+
+videos.forEach((video) => {
+    video.addEventListener('mouseenter', () => {
+        video.play();
+        video.style.filter = 'blur(0px)';
+    });
+    
+    video.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+        video.style.filter = 'blur(2px)';
+    });
+} )
