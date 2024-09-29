@@ -1,0 +1,88 @@
+.opinion {
+    margin-bottom: 300px;
+
+    &>.container {
+        overflow: hidden;
+        position: relative;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &>.svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        font-family: 'Inter';
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: 40px;
+        margin-bottom: 37px;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    &__btn {
+        padding: 23px 178px;
+        font-size: 20px;
+        text-transform: uppercase;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: #fff;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .opinion {
+        
+        &>.container {
+            border-radius: 0;
+        }
+
+        &__text {
+            font-size: 25px;
+        }
+
+        &__btn {
+            padding: 20px 143px;
+            font-size: 17px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .opinion {
+        margin-bottom: 100px;
+        
+        &>.container {
+            border-radius: 0;
+        }
+
+        &__text {
+            text-align: start;
+            margin: 25px 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        &__btn {
+            padding: 7px 41px;
+            font-size: 16px;
+            border-radius: 4.342px;
+            margin-bottom: 25px;
+        }
+    }
+}

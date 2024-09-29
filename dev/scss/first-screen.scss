@@ -111,18 +111,33 @@
             max-width: 407px;
             background-color: $color-violet;
             width: 100%;
+            transition: 0.3s ease;
+
+            &:hover {
+                background-color: #fff;
+            }
         }
 
         .telegram {
             max-width: 288px;
             background-color: $color-orange;
             width: 100%;
+            transition: 0.3s ease;
+
+            &:hover {
+                background-color: #fff;
+            }
         }
 
         .calendar {
             max-width: 705px;
             background-color: $color-yellow;
             width: 100%;
+            transition: 0.3s ease;
+
+            &:hover {
+                background-color: #fff;
+            }
         }
     }
 

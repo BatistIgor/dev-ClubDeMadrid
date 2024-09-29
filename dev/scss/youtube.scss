@@ -31,6 +31,19 @@
     }
 }
 
+@media screen and (max-width: 1710px) {
+    .youtube {
+        &__video {
+            max-width: 449px;;
+        }
+
+        &__box {
+            max-width: 1100px;
+            margin: 0 auto 50px;
+        }
+    }
+}
+
 
 @media screen and (max-width: 1024px) {
     .youtube {
@@ -44,9 +57,6 @@
             margin-bottom: 50px;
         }
 
-        &__video {
-            max-width: 449px;;
-        }
 
         &__btn {
             padding: 22px 133px;

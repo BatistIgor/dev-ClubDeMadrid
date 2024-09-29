@@ -43,6 +43,11 @@
         &-link {
             color: #000;
             font-size: 16px;
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 
@@ -56,10 +61,16 @@
         line-height: 16px;
         align-items: center;
         gap: 61px;
-        cursor: pointer;
+        border: 1px rgba(0, 0, 0, 0) solid;
 
         &--mob {
             display: none;
+        }
+
+        &:hover {
+            background-color: #fff;
+            border: 1px rgba(0, 0, 0, 1) solid;
+            color: #000;
         }
     }
 
@@ -67,6 +78,15 @@
 
 .hamburger {
     display: none;
+}
+
+.hamburger, 
+.hamburger:focus, 
+.hamburger:active {
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: inherit;
 }
 
 
