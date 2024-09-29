@@ -260,38 +260,37 @@
             height: auto;
             margin-top: 100px;
 
-            &-blok {
-                gap: 50px;
-            }
-    
-            &-item {
-
-            }
-    
             &-title {
                 font-size: 14px;
             }
-    
-            &-num {
-                font-size: 10.894px;
+
+            &-blok {
+                gap: 50px;
             }
     
             &-img {
                 max-width: 18px;
                 max-height: 18px;
             }
-    
-            .whatsapp {
+        }
+    }
+}
 
-            }
+@media screen and (max-width: 320px) {
     
-            .telegram {
+    .first-screen {
 
-            }
-    
-            .calendar {
+        &__box {
 
+            &--video {
+                height: auto;
+                min-height: 0px;
             }
+        }
+
+        &__video {
+            height: auto;
+            width: 220%;
         }
     }
 }
