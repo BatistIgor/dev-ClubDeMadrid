@@ -91,7 +91,7 @@ function convertToAvif() {
 
 // Функция обработки JS
 function scripts() {
-    return src(['dev/assets/js/main.js'])  
+    return src(['dev/assets/js/swiper-bundle.js','dev/assets/js/wow.js','dev/assets/js/main.js'])  
         .pipe(concat('main.min.js')) 
         .pipe(uglifyJs())               
         .pipe(dest('build/assets/js'))  

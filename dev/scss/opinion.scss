@@ -1,5 +1,5 @@
 .opinion {
-    margin-bottom: 300px;
+    margin-bottom: $margin-big-section-desktop;
 
     &>.container {
         overflow: hidden;
@@ -47,6 +47,7 @@
 
 @media screen and (max-width: 1024px) {
     .opinion {
+        margin-bottom: $margin-big-section-mobile;
         
         &>.container {
             border-radius: 0;
@@ -65,7 +66,6 @@
 
 @media screen and (max-width: 500px) {
     .opinion {
-        margin-bottom: 100px;
         
         &>.container {
             border-radius: 0;

@@ -1,9 +1,10 @@
 .first-screen {
+    overflow: hidden;
     position: relative;
     z-index: 10;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 300px;
+    margin-bottom: $margin-big-section-desktop;
 
     &__box {
         width: 50%;
@@ -199,6 +200,7 @@
     .first-screen {
         flex-direction: column;
         align-items: center;
+        margin-bottom: $margin-big-section-mobile;
 
         &__title {
             margin: 150px 0 20px 0;
@@ -247,7 +249,6 @@
 
 @media screen and (max-width: 500px) {
     .first-screen {
-        margin-bottom: 100px;
         
         &__box {
             &--title {

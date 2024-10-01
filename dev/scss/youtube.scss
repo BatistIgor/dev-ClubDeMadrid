@@ -1,5 +1,5 @@
 .youtube {
-    margin-bottom: 200px;
+    margin-bottom: $margin-min-section-desktop;
 
     &__title {
         font-family: 'Impact';
@@ -47,6 +47,7 @@
 
 @media screen and (max-width: 1024px) {
     .youtube {
+        margin-bottom: $margin-min-section-mobile;
 
         &__title {
             font-size: 63px;
@@ -67,7 +68,6 @@
 
 @media screen and (max-width: 500px) {
     .youtube {
-        margin-bottom: 80px;
 
         &__title {
             font-size: 24px;

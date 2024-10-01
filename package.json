@@ -27,6 +27,8 @@
     "sass": "^1.77.8"
   },
   "dependencies": {
-    "hamburgers": "^1.2.1"
+    "animate.css": "^4.1.1",
+    "hamburgers": "^1.2.1",
+    "swiper": "^11.1.14"
   }
 }
