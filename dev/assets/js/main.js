@@ -135,3 +135,36 @@ professions.forEach((profession) => {
         description.classList.toggle('participants__description-active')
     })
 })
+
+
+  ////////////////////acordeon////////////////////
+
+
+
+  const acordeonItems = document.querySelectorAll('.acordeon__item');
+  const acordeonTitles = document.querySelectorAll('.acordeon__item-title');
+  const acordeonTexts = document.querySelectorAll('.acordeon__item-text');
+  
+  const acordeonChange = function(item, event) {
+      const width = document.documentElement.clientWidth;
+      const title = item.querySelector('.acordeon__item-title');
+      const text = item.querySelector('.acordeon__item-text');
+
+      if (event.type === 'mouseenter' && width < 1514) {
+            return;
+      } else if (event.type === 'click' && width >= 1514) {
+            return;
+      }
+      
+      acordeonTitles.forEach(i => i.classList.remove('acordeon__item-title-active'));
+      acordeonTexts.forEach(i => i.classList.remove('acordeon__item-text-active'));
+      acordeonItems.forEach(i => i.classList.remove('acordeon__item-active'));
+      title.classList.toggle('acordeon__item-title-active');
+      text.classList.toggle('acordeon__item-text-active');
+      item.classList.toggle('acordeon__item-active');
+  };
+  
+  acordeonItems.forEach(item => {
+      item.addEventListener('mouseenter', (event) => acordeonChange(item, event));
+      item.addEventListener('click', (event) => acordeonChange(item, event));
+  });

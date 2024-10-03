@@ -21,6 +21,9 @@
             height: calc(100vh - $height-header);
             overflow: hidden; 
             min-height: 800px;
+            background-image: url("../img/first-screen-video.webp");
+            background-position: left;
+            background-size: cover;
         }
 
         &--ling {

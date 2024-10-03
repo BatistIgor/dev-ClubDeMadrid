@@ -1,5 +1,5 @@
 .participants {
-    margin-bottom: $margin-big-section-desktop;
+    margin-bottom: calc($margin-big-section-desktop + 50px);
 
     &>.container {
         position: relative;
@@ -139,7 +139,7 @@
 
 @media screen and (max-width: 1024px) {
     .participants {
-        margin-bottom: $margin-big-section-mobile;
+        margin-bottom: calc($margin-big-section-mobile + 94px);
 
         .swiper-pagination {
             display: none;
