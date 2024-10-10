@@ -1,0 +1,162 @@
+.blog-marketing {
+    margin-bottom: $margin-big-section-desktop;
+
+    &>.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        justify-items: center;
+        gap: 47px;
+        margin-bottom: 100px;
+    }
+
+    &__item {
+        max-width: 330px;
+
+        &-img {
+            border-radius: 20px;
+            max-width: 330px;
+            max-height: 215px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        &-description {
+            font-size: 20px;
+            line-height: normal;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        &-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+            font-size: 14px;
+            line-height: 20px; 
+            margin-bottom: 20px;
+        }
+
+        &-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &>p {
+                font-size: 12px;
+            }
+
+            &>button {
+                font-size: 18px;
+                color: #fff;
+                
+                &:hover {
+                    background-color: $color-bg;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    &__btn {
+        padding: 20px;
+        max-width: 350px;
+        width: 100%;
+        cursor: pointer;
+        color: #818181;
+        font-size: 24px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+
+        &-span {
+            opacity: 1;
+        }
+
+        &-span-fadeout {
+            animation: fadeOut 0.4s forwards;
+        }
+
+        &-span-fadein {
+            animation: fadeIn 0.4s forwards;
+        }
+
+        &:hover {
+            background-color: $color-bg;
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+            width: 135px;
+        }
+        100% {
+            opacity: 0;
+            width: 0;
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            width: 0;
+        }
+        100% {
+            opacity: 1;
+            width: 135px;
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    
+    .blog-marketing {
+        
+        &__grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1499px) {
+    
+    .blog-marketing {
+        
+        &__grid {
+            gap: 96px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 799px) {
+    
+    .blog-marketing {
+        margin-bottom: $margin-big-section-mobile;
+
+        &__grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    .blog-marketing {
+        
+        &__btn {
+            &-span {
+                display: none;
+            }
+        }
+    }
+}

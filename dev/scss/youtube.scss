@@ -18,6 +18,7 @@
     &__video {
         max-width: 798px;
         max-height: 665px;
+        width: 100%;
         filter: blur(2px);
         transition: filter 0.3s; 
     }

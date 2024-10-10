@@ -1,5 +1,4 @@
 .paralax {
-    --title-height: 0px;
     margin-bottom: $margin-big-section-desktop;
 
 
@@ -28,9 +27,6 @@
         transition: top 3s ease;
     }
 
-    .move-to-bottom {
-        top: calc(100% - var(--title-height));
-    }
 
     &__box {
         display: flex;

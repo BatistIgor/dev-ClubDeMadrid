@@ -1,0 +1,103 @@
+.poster {
+    margin-bottom: $margin-big-section-desktop;
+
+    &>.container {
+        height: 430px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &>.svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+
+    &__box {
+        position: absolute;
+        top: 30%;
+        left: auto;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        animation-fill-mode: forwards;
+        animation-duration: 10s;
+
+        &--visible {
+            animation-name: poster-transform;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        z-index: 2;
+        font-family: 'Impact';
+        font-size: 128px;
+        font-weight: 400;
+
+        &--first {
+            top: 0%;
+        }
+        &--second {
+            top: 100%;
+        }
+        &--third {
+            top: 200%;
+        }
+        &--fourth{
+            text-align: center;
+            font-size: 100px;
+            top: 300%;
+        }
+    }
+}
+
+@keyframes poster-transform {
+    0% { top: 30%;}
+    5% { top: 30%;}
+    23% { top: -70%;}
+    27% { top: -70%;}
+    48% { top: -170%;}
+    52% { top: -170%;}
+    73% { top: -270%;}
+    100% { top: -270%;}
+}
+
+@media screen and (max-width: 1024px) { 
+    .poster { 
+        margin-bottom: $margin-big-section-mobile;
+
+        &__text {
+            font-size: 80px;
+    
+            &--fourth{
+                font-size: 64px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) { 
+    .poster { 
+        margin-bottom: $margin-big-section-mobile;
+
+        &>.container {
+            height: 150px;
+        }
+
+        &__text {
+            font-size: 48px;
+    
+            &--fourth{
+                font-size: 30px;
+            }
+        }
+    }
+}

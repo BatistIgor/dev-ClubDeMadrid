@@ -77,6 +77,69 @@ h6 {
     margin: 0 auto;
 }
 
+.swiper__buttons {
+    width: 100%;
+    position: absolute;
+    bottom: -153px;
+    right: 0;
+    display: flex;
+    gap: 25px;
+    justify-content: end;
+    padding-right: 40px;
+}
+
+.swiper__button  {
+    cursor: pointer;
+    padding: 14px 10px;
+    border: 1px solid $color-violet;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: 0.3s ease;
+    
+
+    &-next {
+        right: 84px;
+    }
+
+    &-prev {
+        right: 14px;
+    }
+
+    &:hover {
+        background-color: $color-violet;
+    }
+}
+
+.swiper-pagination {
+    position: absolute;
+    text-align: start;
+    bottom: -126px !important;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1;
+}
+
+.swiper-pagination-bullet {
+    width: 40px;
+    height: 4px;
+    background: #fff;
+    border-radius: 100px;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: $color-violet;
+    width: 120px;
+    height: 12px;
+    border-radius: 100px;
+}
+
+
 @media screen and (max-width: 500px) {
     .container {
         padding: 0 20px;
