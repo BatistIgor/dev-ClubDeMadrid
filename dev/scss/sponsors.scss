@@ -1,0 +1,121 @@
+.sponsors {
+    margin-bottom: $margin-big-section-desktop;
+
+    &__title {
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 92px;
+        text-align: center;
+    }
+
+    &__box {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 208px;
+        column-gap: 128px;
+        justify-content: center;
+        align-items: center;
+
+        &>svg {
+            max-width: 416px;
+            width: 100%;
+        }
+    }
+
+    &__cocacola {
+        fill: #DDD;
+        transition: 0.3s ease;
+
+        &:hover {
+            fill: red;
+        }
+    }
+
+    &__mcdonalds {
+        fill: #DDD;
+        transition: 0.3s ease;
+
+        &:hover {
+            fill: #ddd41d;
+        }
+    }
+
+    &__disney {
+        fill: #DDD;
+        transition: 0.3s ease;
+
+        &:hover {
+            fill: #fff;
+        }
+    }
+
+    &__pepsi {
+        &-top {
+            transition: 0.3s ease;
+        }
+        &-bottom {
+            transition: 0.3s ease;
+        }
+    }
+
+    &__pepsi:hover .sponsors__pepsi-top {
+        fill: red;
+    }
+
+    &__pepsi:hover .sponsors__pepsi-bottom {
+        fill: blue;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .sponsors {
+        margin-bottom: $margin-big-section-mobile;
+
+        &__box {
+            &>svg {
+                max-width: 300px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .sponsors {
+        &__box {
+            &>svg {
+                max-width: 200px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .sponsors {
+        &__title {
+            margin-bottom: 30px;
+        }
+
+        &__box {
+            row-gap: 0px;
+            column-gap: 70px;
+
+            &>svg {
+                max-width: 125px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sponsors {
+        &__title {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 38px;
+        }
+    }
+}

@@ -67,9 +67,9 @@ function sprite() {
 
 //Функции работы с изображениями. Сжатие png,jpg,svg и конвертация png,jpg в форматы webp и Avif
 function minifyImages() {
-    return src('dev/assets/img/*.{png,jpg,svg}', {encoding: false})
-        .pipe(newer('build/assets/img'))
-        .pipe(imagemin())
+    return src('dev/assets/img/**/*.svg')
+        // .pipe(newer('build/assets/img'))
+        // .pipe(imagemin())
         .pipe(dest('build/assets/img'));
 }
 
