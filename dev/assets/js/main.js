@@ -31,7 +31,7 @@ function toggleText() {
 ////////////////////video////////////////////
 
 
-const videos = document.querySelectorAll('#myVideo');
+const videos = document.querySelectorAll('.youtube__video');
 
 videos.forEach((video) => {
     video.addEventListener('mouseenter', () => {
@@ -69,7 +69,7 @@ window.addEventListener('scroll', () => {
 
 ////////////////////wow.js////////////////////
 
-// new WOW().init();
+new WOW().init();
 
 
 ////////////////////swiper////////////////////

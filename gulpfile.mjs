@@ -28,6 +28,14 @@ function moveVideo() {
       .pipe(dest('build/assets/video')); 
   }
 
+//перемещение фавиконок
+function moveFavicon() {
+    return src('dev/assets/favicon/**/*',{
+        encoding: false // Important!
+      }) 
+      .pipe(dest('build/assets/favicon')); 
+  }
+
 // Функции конвертации ttf в woff,woff2
 function fonts2woff() {
     return src('dev/assets/fonts/*.ttf',{
@@ -142,7 +150,7 @@ function watching() {
 }
 
 // Экспорт задач
-export {fonts2woff, fonts2woff2, sprite, minifyImages, convertToWebp, convertToAvif, styles, scripts, buildHtml, cleanDist, watching, moveVideo};
+export {fonts2woff, fonts2woff2, sprite, minifyImages, convertToWebp, convertToAvif, styles, scripts, buildHtml, cleanDist, watching, moveVideo, moveFavicon};
 
 // Экспорт по умолчанию
-export default series(cleanDist, parallel(moveVideo, fonts2woff, fonts2woff2, minifyImages, convertToWebp, convertToAvif, styles, scripts, buildHtml), watching);
+export default series(cleanDist, parallel(moveVideo, moveFavicon, fonts2woff, fonts2woff2, minifyImages, convertToWebp, convertToAvif, styles, scripts, buildHtml), watching);
