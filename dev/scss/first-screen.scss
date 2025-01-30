@@ -233,10 +233,6 @@
             }
         }
 
-        &__video {
-            height: auto;
-            width: 220%;
-        }
 
         &__social {
             justify-content: center;
@@ -294,25 +290,6 @@
                 max-width: 18px;
                 max-height: 18px;
             }
-        }
-    }
-}
-
-@media screen and (max-width: 320px) {
-    
-    .first-screen {
-
-        &__box {
-
-            &--video {
-                height: auto;
-                min-height: 0px;
-            }
-        }
-
-        &__video {
-            height: auto;
-            width: 220%;
         }
     }
 }
